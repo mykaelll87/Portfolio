@@ -1,0 +1,52 @@
+.skewedDiv{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 10px;
+}
+
+.skewedDiv::before{
+    content: '';
+    width: 100%;
+    height: 75px;
+    position: absolute;
+    background-color: inherit;
+    z-index: -1;
+    left: 0;
+    bottom: 100%;
+    transform: skewY(3deg)
+}
+
+.skewedDiv::after{
+    content: '';
+    width: 100%;
+    height: 75px;
+    position: absolute;
+    background-color: inherit;
+    z-index: -1;
+    top: 100%;
+    left: 0;
+    transform: skewY(-3deg);
+}
+
+.skewedDiv.ltrSkew::before{
+    transform-origin: left top;
+}
+
+.skewedDiv.ltrSkew::after{
+    transform-origin: right top;
+}
+
+.skewedDiv.rtlSkew::before{
+    transform-origin: right bottom;
+}
+
+.skewedDiv.ltrSkew::before{
+    transform-origin: left top;
+}
+.skewedDiv.noTop::before{
+    content: none;
+}
+.skewedDiv.noBottom::after{
+    content: none;
+}

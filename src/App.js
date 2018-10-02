@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+import 'animate.css';
+import {WOW} from 'wowjs';
+import SkewedContainer from './components/SkewedContainer'
 
 class App extends Component {
+  componentDidMount(){
+    window.wow = new WOW();
+  }
   render() {
     return (
       <div className="App">
@@ -20,6 +26,10 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <div style={{height:'150px'}}></div>
+        <SkewedContainer className="bgAccent noBottom">
+          <p>Bon matin</p>
+        </SkewedContainer>
       </div>
     );
   }
