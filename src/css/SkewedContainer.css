@@ -6,16 +6,21 @@
     padding: 10px;
 }
 
+.skewedDiv.initial{
+    transform: skew(0);
+}
+
 .skewedDiv::before{
     content: '';
     width: 100%;
     height: 75px;
     position: absolute;
     background-color: inherit;
-    z-index: -1;
+    z-index: 0;
     left: 0;
     bottom: 100%;
-    transform: skewY(3deg)
+    transform: skewY(0);
+    transition: transform 1s 2s
 }
 
 .skewedDiv::after{
@@ -24,29 +29,47 @@
     height: 75px;
     position: absolute;
     background-color: inherit;
-    z-index: -1;
+    z-index: 0;
     bottom: 0;
     left: 0;
 }
 
+@keyframes skewLeft {
+    from{
+        transform: skewY(0deg)
+    }
+    to{
+        transform: skewY(3deg)
+    }
+}
+
+@keyframes skewRight {
+    from{
+        transform: skewY(0deg)
+    }
+    to{
+        transform: skewY(-3deg)
+    }
+}
+
 .skewedDiv.ltrSkew::before{
     transform-origin: left bottom;
-    transform: skewY(3deg);
+    animation: skewLeft 1s normal ease-in-out forwards;
 }
 
 .skewedDiv.ltrSkew::after{
     transform-origin: left bottom;
-    transform: skewY(3deg);
+    animation: skewLeft 1s normal ease-in-out forwards;
 }
 
 .skewedDiv.rtlSkew::before{
     transform-origin: right bottom;
-    transform: skewY(-3deg);
+    animation: skewRight 1s normal ease-in-out forwards;
 }
 
 .skewedDiv.rtlSkew::after{
     transform-origin: right bottom;
-    transform: skewY(-3deg);
+    animation: skewRight 1s normal ease-in-out forwards;
 }
 .skewedDiv.noTop::before{
     content: none;

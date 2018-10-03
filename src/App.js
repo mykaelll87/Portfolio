@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './css/App.css';
 import 'animate.css';
 import {WOW} from 'wowjs';
 import SkewedContainer from './components/SkewedContainer'
+import Header from './components/Header';
 
 class App extends Component {
   componentDidMount(){
@@ -12,9 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SkewedContainer className="appHeader">
-          
-        </SkewedContainer>
+        <Header/>
         <div style={{height:'75vh'}}></div>
         <SkewedContainer className="bgAccent noBottom">
           <p>Bon matin</p>

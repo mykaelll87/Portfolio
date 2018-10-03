@@ -3,10 +3,11 @@
   --mainColor: #f9f9f9;
   --accentColor: #282c34;
   overflow-x: hidden;
+  background-color: var(--mainColor)
 }
 
-.appHeader {
-  background-color: #282c34;
+#AppHeader {
+  background-color: var(--accentColor);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +15,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
   min-height: 5vh;
+  color: var(--mainColor);
+  
 }
 
 .bgAccent{
