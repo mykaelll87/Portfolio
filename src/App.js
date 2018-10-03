@@ -12,21 +12,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-        <div style={{height:'150px'}}></div>
+        <SkewedContainer className="appHeader">
+          
+        </SkewedContainer>
+        <div style={{height:'75vh'}}></div>
         <SkewedContainer className="bgAccent noBottom">
           <p>Bon matin</p>
         </SkewedContainer>
