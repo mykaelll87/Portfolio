@@ -1,11 +1,8 @@
 import React,{Component} from 'react'
 import "../css/SkewedContainer.css"
+import proptype from 'prop-types'
 
-export default class Allo extends Component{
-    constructor(p){
-        super(p);
-        
-    }
+export default class SkewedContainer extends Component{
     render(){
        return (
         <div id={this.props.id?this.props.id:''} 
@@ -14,4 +11,11 @@ export default class Allo extends Component{
         </div>
         )
     }
+}
+
+SkewedContainer.propTypes={
+    id: proptype.string,
+    direction: proptype.oneOf(["ltr", "rlt"]),
+    className: proptype.string,
+    children: proptype.node.isRequired
 }
