@@ -3,19 +3,18 @@ import './css/App.css';
 import 'animate.css';
 import { WOW } from 'wowjs';
 import SkewedContainer from './components/SkewedContainer';
-
 import Header from './components/header/Header';
+import {supportedLanguages} from './stores/translationStore';
 import propTypes from "prop-types";
 
 class App extends Component {
     constructor(p) {
         super(p);
         //TODO Use store
-        this.supportedTranslations = ["fr", "en"]
         console.log(this.props)
-        this.lang = this.supportedTranslations.indexOf(this.props.lang.toLowerCase()) >= 0 ?
+        this.lang = supportedLanguages.indexOf(this.props.lang.toLowerCase()) >= 0 ?
             this.props.lang.toLowerCase() :
-            this.supportedTranslations[0];
+            supportedLanguages[0];
     }
     componentDidMount() {
         new WOW().init();
