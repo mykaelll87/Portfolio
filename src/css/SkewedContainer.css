@@ -1,13 +1,23 @@
+.skewedWrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
 .skewedDiv{
     width: 100%;
     height: 100%;
     position: relative;
     transform-origin: bottom left;
     padding: 10px;
-    z-index: 2;
+    background-color: inherit
+    /*z-index: 2;*/
 }
 
-.skewedDiv::before{
+.skewedWrapper::before,
+.skewedWrapper::after{
     content: '';
     width: 100%;
     height: 75px;
@@ -15,20 +25,17 @@
     background-color: inherit;
     z-index: -1;
     left: 0;
-    bottom: 100%;
+    box-shadow: black 0 0 20px;
     transform: skewY(0);
-    transition: transform 1s 2s
+    transition: transform 1s 2s;
 }
 
-.skewedDiv::after{
-    content: '';
-    width: 100%;
-    height: 75px;
-    position: absolute;
-    background-color: inherit;
-    z-index: -1;
+.skewedWrapper::before{
+    bottom: 100%;
+}
+
+.skewedWrapper::after{
     bottom: 0;
-    left: 0;
 }
 
 @keyframes skewLeft {
@@ -49,28 +56,28 @@
     }
 }
 
-.skewedDiv.ltrSkew::before{
+.skewedWrapper.ltrSkew::before{
     transform-origin: left bottom;
     animation: skewLeft 1s normal ease-in-out forwards;
 }
 
-.skewedDiv.ltrSkew::after{
+.skewedWrapper.ltrSkew::after{
     transform-origin: left bottom;
     animation: skewLeft 1s normal ease-in-out forwards;
 }
 
-.skewedDiv.rtlSkew::before{
+.skewedWrapper.rtlSkew::before{
     transform-origin: right bottom;
     animation: skewRight 1s normal ease-in-out forwards;
 }
 
-.skewedDiv.rtlSkew::after{
+.skewedWrapper.rtlSkew::after{
     transform-origin: right bottom;
     animation: skewRight 1s normal ease-in-out forwards;
 }
-.skewedDiv.noTop::before{
+.skewedWrapper.noTop::before{
     content: none;
 }
-.skewedDiv.noBottom::after{
+.skewedWrapper.noBottom::after{
     content: none;
 }

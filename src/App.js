@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import './css/App.css';
 import 'animate.css';
 import { WOW } from 'wowjs';
-import SkewedContainer from './components/SkewedContainer'
-import Header from './components/Header';
+import SkewedContainer from './components/SkewedContainer';
+
+import Header from './components/header/Header';
 import propTypes from "prop-types";
 
 class App extends Component {
     constructor(p) {
         super(p);
+        //TODO Use store
         this.supportedTranslations = ["fr", "en"]
         console.log(this.props)
         this.lang = this.supportedTranslations.indexOf(this.props.lang.toLowerCase()) >= 0 ?
@@ -22,6 +24,7 @@ class App extends Component {
         return (
             <div className="App">
                 <Header language={this.lang} />
+                {/*Add particle.js?*/}
                 <div style={{ height: '75vh' }}></div>
                 <SkewedContainer className="bgAccent noBottom">
                     <p>Bon matin</p>

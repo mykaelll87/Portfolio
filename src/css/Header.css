@@ -1,15 +1,17 @@
 #AppHeader {
     background-color: var(--accentColor);
+    min-height: 5vh;
+    color: var(--mainColor);
+    /*z-index: 2;*/
+}
+#AppHeaderWrapper{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    font-size: medium;
-    color: white;
-    min-height: 5vh;
-    color: var(--mainColor);
-    z-index: 2;
-    
+    font-size: smaller;
 }
 
 #AppHeader .pageList{
@@ -19,8 +21,19 @@
 
 #AppHeader .pageList > li {
     display: inline;
-    padding-left: 10px
+    padding-left: 10px;
+    background-color: transparent;
 }
+#AppHeader .pageList > li>a:hover {
+    box-shadow: white 5px 5px 20px
+}
+
+#AppHeader .pageList > li >a{
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit
+}
+
 #AppHeader .siteTitle{
     text-align: left;
 }
