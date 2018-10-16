@@ -10,7 +10,6 @@ import propTypes from "prop-types";
 class App extends Component {
     constructor(p) {
         super(p);
-        //TODO Use store
         console.log(this.props)
         this.lang = supportedLanguages.indexOf(this.props.lang.toLowerCase()) >= 0 ?
             this.props.lang.toLowerCase() :

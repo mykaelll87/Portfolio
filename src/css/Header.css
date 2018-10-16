@@ -15,21 +15,39 @@
 }
 
 #AppHeader .pageList{
+    padding: 0;
     list-style-type: none;
     position: relative;
 }
 
 #AppHeader .pageList > li {
-    display: inline;
-    padding-left: 10px;
-    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    padding: 5px;
+    opacity: .65;
+    border-bottom: none;
+    transition: opacity 0.3s ease-in-out;
 }
-#AppHeader .pageList > li>a:hover {
-    box-shadow: white 5px 5px 20px
+
+#AppHeader .pageList > li::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+#AppHeader .pageList > li:hover{
+    opacity: 1;
+}
+#AppHeader .pageList > li:hover::after {
+    transform: scaleX(1);
 }
 
 #AppHeader .pageList > li >a{
-    background-color: transparent;
     text-decoration: none;
     color: inherit
 }

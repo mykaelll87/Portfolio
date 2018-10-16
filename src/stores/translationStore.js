@@ -10,6 +10,6 @@ export const translations={
         }
     },
     en:{
-
+        
     }
 }
