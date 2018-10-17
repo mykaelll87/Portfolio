@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './css/App.css';
 import 'animate.css';
 import { WOW } from 'wowjs';
-import SkewedContainer from './components/SkewedContainer';
 import Header from './components/header/Header';
+import Footer from './components/Footer';
 import {supportedLanguages} from './stores/translationStore';
 import propTypes from "prop-types";
 
@@ -24,9 +24,7 @@ class App extends Component {
                 <Header language={this.lang} />
                 {/*Add particle.js?*/}
                 <div style={{ height: '75vh' }}></div>
-                <SkewedContainer className="bgAccent noBottom">
-                    <p>Bon matin</p>
-                </SkewedContainer>
+                <Footer/>
             </div>
         );
     }
