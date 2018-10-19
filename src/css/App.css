@@ -11,3 +11,17 @@
   background-color: var(--accentColor);
   color: white;
 }
+
+#particlesJS{
+  background-color: rgb(102, 0, 0);
+  position: relative;
+}
+#particlesJS::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0%;
+  height: 15%;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(249, 249, 249, 0), rgba(249,249,249,1))
+}

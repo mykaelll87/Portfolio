@@ -6,7 +6,6 @@ export default class Icon extends Component{
     constructor(p){
         super(p);
         this.iconInfo = icons[this.props.iconId];
-        console.log(icons);
     }
     render(){
         return(
