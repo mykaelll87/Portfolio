@@ -1,21 +1,15 @@
+.pageHeaderWrapper{
+    position: relative;
+    --page-header-box-size: 50vmin;
+    width: var(--page-header-box-size)
+}
 .pageHeader{
-    width: 50vmin;
-    height: 50vmin;
-    float: left;
-    top: 25vmin;
+    position: absolute;
+    bottom: 0;
+    width: var(--page-header-box-size);
+    height: var(--page-header-box-size);
     background-color: var(--mainColor);
     border: thin transparent solid;
     border-radius: 5px;
     box-shadow: black 0 0 20px;
-}
-
-.pageHeader::before,
-.pageHeader::after{
-    /*ClearFix, thanks to http://jsfiddle.net/necolas/K538S/*/
-    content: "";
-    display: table;
-}
-
-.pageHeader::after{
-    clear: both;
 }

@@ -5,9 +5,12 @@ import "../css/PageHeader.css";
 export default class PageHeader extends Component{
     render(){
         return(
-            <div className="pageHeader wow fadeInUp">
-                {this.props.children}
+            <div className="pageHeaderWrapper">
+                <div className="pageHeader wow fadeInUp">
+                    {this.props.children}
+                </div>
             </div>
+            
         );
     }
 }
