@@ -15,7 +15,9 @@
 
 #particlesJS{
   background-color: var(--accentColor2);
-  position: relative;
+  position: absolute;
+  width: 100%;
+  max-height: 75vh;
 }
 #particlesJS::after{
   content: "";

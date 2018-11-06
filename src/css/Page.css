@@ -3,5 +3,6 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    align-items: center
+    align-items: center;
+    margin-top: 25vmin;
 }

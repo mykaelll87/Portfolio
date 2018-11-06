@@ -26,14 +26,12 @@ class App extends Component {
         return (
             <div className="App">
                 <Header language={this.lang} />
-                {/*Add particle.js?*/}
                 <div id="particlesJS"></div>
                 <Switch>
                     <Route path="/portfolio"><p>portfolio</p></Route>
                     <Route path="/contact"><p>contact</p></Route>
                     <Route><MainPage/></Route>
                 </Switch>
-                {/*<div style={{ height: '75vh' }}></div>*/}
                 <Footer/>
             </div>
         );
