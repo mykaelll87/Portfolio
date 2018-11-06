@@ -1,0 +1,10 @@
+.pageHeader{
+    width: 50vmin;
+    height: 50vmin;
+    position: absolute;
+    top: -40vmin;
+    background-color: var(--mainColor);
+    border: thin transparent solid;
+    border-radius: 5px;
+    box-shadow: black 0 0 20px;
+}

@@ -20,7 +20,6 @@ class App extends Component {
     }
     componentDidMount() {
         new WOW().init();
-        //console.log(particleConfig)
         window.particlesJS("particlesJS", particleConfig);
     }
     render() {
